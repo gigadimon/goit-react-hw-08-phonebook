@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+  text-align: center;
+  height: 85vh;
+
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.link {
+  text-decoration: none;
+  color: #1976d2;
+}
+
+.text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,23 @@
+.authContainer {
+  margin-left: auto;
+}
+
+.link {
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  color: black;
+
+  transition: color 150ms linear;
+}
+.link:first-child {
+  margin-right: 20px;
+}
+
+.link:active,
+.link:focus,
+.link:hover {
+  color: #1976d2;
+}

@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: baseline;
+  /* justify-content: space-between; */
+
+  padding: 20px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.link {
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  color: black;
+
+  transition: color 150ms linear;
+}
+
+.link:active,
+.link:focus,
+.link:hover {
+  color: #1976d2;
+}

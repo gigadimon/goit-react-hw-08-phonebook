@@ -1,0 +1,26 @@
+.userMenuContainer {
+  margin-left: auto;
+}
+
+.email {
+  margin-right: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.link {
+  margin-left: 20px;
+
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+
+  transition: color 150ms linear;
+}
+
+.link:active,
+.link:focus,
+.link:hover {
+  color: #1976d2;
+}
