@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import PrivateRoute from './PrivateRoute/PrivateRoute';
-import PublicRoute from './PublicRoute/PublicRoute';
 import { lazy, Suspense } from 'react';
 import { Header } from './Header';
 import Spinner from './Spinner/Spinner';
@@ -11,6 +9,8 @@ const RegistrationForm = lazy(() =>
 );
 const LoginForm = lazy(() => import('./LoginForm/LoginForm'));
 const HomePage = lazy(() => import('./HomePage/HomePage'));
+const PrivateRoute = lazy(() => import('./PrivateRoute/PrivateRoute'));
+const PublicRoute = lazy(() => import('./PublicRoute/PublicRoute'));
 
 export const BASE_URL = '/goit-react-hw-08-phonebook';
 
