@@ -12,14 +12,12 @@ const HomePage = lazy(() => import('./HomePage/HomePage'));
 const PrivateRoute = lazy(() => import('./PrivateRoute/PrivateRoute'));
 const PublicRoute = lazy(() => import('./PublicRoute/PublicRoute'));
 
-export const BASE_URL = '/goit-react-hw-08-phonebook';
-
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/goit-react-hw-08-phonebook">
       <Suspense fallback={<Spinner />}>
         <Routes>
-          <Route path={`${BASE_URL}/`} element={<Header />}>
+          <Route path="/" element={<Header />}>
             <Route
               index
               element={
@@ -31,7 +29,7 @@ function App() {
             <Route
               path="register"
               element={
-                <PublicRoute to={`${BASE_URL}/contacts`} replace restricted>
+                <PublicRoute to="/contacts" replace restricted>
                   <RegistrationForm />
                 </PublicRoute>
               }
@@ -39,7 +37,7 @@ function App() {
             <Route
               path="login"
               element={
-                <PublicRoute to={`${BASE_URL}/contacts`} replace restricted>
+                <PublicRoute to="/contacts" replace restricted>
                   <LoginForm />
                 </PublicRoute>
               }
@@ -47,13 +45,13 @@ function App() {
             <Route
               path="contacts"
               element={
-                <PrivateRoute to={`${BASE_URL}/`} replace>
+                <PrivateRoute to="/" replace>
                   <Phonebook />
                 </PrivateRoute>
               }
             />
           </Route>
-          <Route path="*" element={<Navigate to={`${BASE_URL}/`} replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
